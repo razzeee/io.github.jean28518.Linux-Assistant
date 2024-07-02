@@ -1,17 +1,17 @@
 app-id: io.github.jean28518.Linux-Assistant
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: "23.08"
 sdk: org.freedesktop.Sdk
 
 command: linux-assistant
 finish-args:
   - "--socket=fallback-x11"
+  - "--socket=wayland"
   - "--device=dri"
   - "--share=ipc"
   - "--filesystem=host"
   - "--share=network"
   - "--talk-name=org.freedesktop.Flatpak"
-
 
 modules:
   - name: linux-assistant
@@ -28,5 +28,5 @@ modules:
       - cp -r additional /app/bin/additional
     sources:
       - type: archive
-        url: https://github.com/Jean28518/linux-assistant/releases/download/v0.3.0/linux-assistant-bundle.zip
-        sha256: 1aafcf5e96dc7e25ae89fe1b381b65a558db9a8a7d0f7e335f983166aede9a9b
+        url: https://github.com/Jean28518/linux-assistant/releases/download/v0.5.3/linux-assistant-bundle.zip
+        sha256: 56b980046e58de00543604d9dcc571c3d9df7e29f2e60ea2a69db9ded32dcda4
